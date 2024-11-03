@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xanh Lá Restaurant</title>
+    <link rel="stylesheet" href="./styles/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/Leaf.png" alt="">
+            <h1>XanhLa</h1>
+        </div>
+        <div class="navbar-link">
+            <a href="#" onclick="scrollToSection(event, 'food')">Trang chủ</a>
+            <a href="#" onclick="scrollToSection(event, 'food')">Menu</a>
+            <a href="#" onclick="scrollToSection(event, 'in4')">Thông tin nhà hàng</a>
+        </div>
+        <div class="navbar-search">
+            <input type="text" class="input" id="search-input" placeholder="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass" onclick="searchAndScroll()"></i>
+            <a href="./UserInfor.html"><i class="fa-solid fa-user" style="color: black;"></i></a>
+        </div>
+    </nav>
+    <div class="book">
+        <div class="book-logo">
+            <img src="./assets/salad.png" alt="salad">
+        </div>
+        
+        <a href="./booking1.html">Đặt bàn</a>
+    </div>
+    <main>
+        <div class="main">
+            <div class="food" id="food">
+             <h2>Bạn muốn ăn gì?</h2>
+            </div>
+        <div class="option-bar">
+            <div class="button">
+                <div class="option-bar-link">
+                    <button id="btn1" class="image-button1" onclick="showImages('btn1')">MÓN NGON NỔI BẬT</button>
+                    <button id="btn2" class="image-button2" onclick="showImages('btn2')">LẨU</button>
+                    <button id="btn3" class="image-button3" onclick="showImages('btn3')">NƯỚNG</button>
+                    <button id="btn4" class="image-button4" onclick="showImages('btn4')">MÓN ĂN NHẸ</button>
+                </div>
+            </div>
+            <div class="option">
+                <div class="option1-img options">
+                    <img class="image" src="./assets/concept_nuong_ba_chi_va_nac_vai_bo_uc_5ce347523f7e427b8667d357bbc38fcc_1285ab3e1eaa4a168a5f833ae1f71bf0.png" alt="nuong-ba-chi">
+                    <img class="image" src="./assets/lau-bo-phan-rang-1-1508.png" alt="lau-bo">
+                    <img class="image" src="./assets/Cach-lam-salad-rau-bap-cai3.png" alt="salad-rau">
+                </div>
+                <div class="option2-img options">
+                    <img class="image" src="./assets/concept_nuong_ba_chi_va_nac_vai_bo_uc_5ce347523f7e427b8667d357bbc38fcc_1285ab3e1eaa4a168a5f833ae1f71bf0.png" alt="nuong-ba-chi">
+                    <img class="image" src="./assets/COMBO-nuong-thinh-soan-5-6-nguoi.png" alt="COMBO-nuong-thinh-soan-5-6-nguoi">
+                    <img class="image" src="./assets/244041-combo-6-mon-nuong-tai-vuon-nuong-bbq 1.png" alt="244041-combo-6-mon-nuong-tai-vuon-nuong-bbq">
+                </div>
+                <div class="option3-img options">
+                    <img class="image" src="./assets/lau nam.png" alt="lau-nam">
+                    <img class="image" src="./assets/lau-bo-phan-rang-1-1508.png" alt="lau-bo">
+                    <img class="image" src="./assets/hinh-anh-lau-thai-chua-cay.png" alt="lau-thai">
+                </div>
+                <div class="option4-img options">
+                    <img class="image" src="./assets/salad-ca-hoi.png" alt="salad-ca-hoi">
+                    <img class="image" src="./assets/cach-lam-banh-mi-nuong-bo-duong-trixie.png" alt="cach-lam-banh-mi-nuong-bo-duong-trixie">
+                    <img class="image" src="./assets/Cach-lam-salad-rau-bap-cai3.png" alt="salad-rau">
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <h2>Menu</h2>
+        </div>
+        <div class="menu-11">
+            <div class="option1-img optionss">
+                <img class="image" src="./assets/concept_nuong_ba_chi_va_nac_vai_bo_uc_5ce347523f7e427b8667d357bbc38fcc_1285ab3e1eaa4a168a5f833ae1f71bf0.png" alt="nuong-ba-chi">
+                <img class="image" src="./assets/lau-bo-phan-rang-1-1508.png" alt="lau-bo">
+                <img class="image" src="./assets/Cach-lam-salad-rau-bap-cai3.png" alt="salad-rau">
+            </div>
+            <div class="option2-img optionss">
+                <img class="image" src="./assets/concept_nuong_ba_chi_va_nac_vai_bo_uc_5ce347523f7e427b8667d357bbc38fcc_1285ab3e1eaa4a168a5f833ae1f71bf0.png" alt="nuong-ba-chi">
+                <img class="image" src="./assets/COMBO-nuong-thinh-soan-5-6-nguoi.png" alt="COMBO-nuong-thinh-soan-5-6-nguoi">
+                <img class="image" src="./assets/244041-combo-6-mon-nuong-tai-vuon-nuong-bbq 1.png" alt="244041-combo-6-mon-nuong-tai-vuon-nuong-bbq">
+            </div>
+            <div class="option3-img optionss">
+                <img class="image" src="./assets/lau nam.png" alt="lau-nam">
+                <img class="image" src="./assets/lau-bo-phan-rang-1-1508.png" alt="lau-bo">
+                <img class="image" src="./assets/hinh-anh-lau-thai-chua-cay.png" alt="lau-thai">
+            </div>
+            <div class="option4-img optionss">
+                <img class="image" src="./assets/salad-ca-hoi.png" alt="salad-ca-hoi">
+                <img class="image" src="./assets/cach-lam-banh-mi-nuong-bo-duong-trixie.png" alt="cach-lam-banh-mi-nuong-bo-duong-trixie">
+                <img class="image" src="./assets/Cach-lam-salad-rau-bap-cai3.png" alt="salad-rau">
+            </div>
+        </div>
+        <div class="infor" id="in4">
+                <div class="in4-1"><h2>Thông tin nhà hàng</h2></div>
+                <div class="in4-2">
+                <h3>Nhà hàng XanhLa - Thích màu xanh</h3>
+                <p><span>Giới thiệu:</span> Nhà hàng XanhLa là điểm đến lý tưởng cho những ai yêu thích ẩm thực xanh, tươi ngon và lành mạnh. Chúng tôi tự hào mang đến cho bạn những món ăn được chế biến từ nguyên liệu tự nhiên, chọn lọc kỹ càng, đảm bảo an toàn vệ sinh thực phẩm và giữ được hương vị tươi ngon nhất.</p>
+                <p><span>Phong cách ẩm thực:</span> Tại XanhLa, chúng tôi phục vụ đa dạng các món ăn, từ những món nướng thơm ngon, lẩu đậm đà đến những món ăn nhẹ thanh mát, phù hợp cho mọi khẩu vị. Chúng tôi đặc biệt chú trọng đến những món ăn lành mạnh, giàu dinh dưỡng nhưng vẫn đầy hương vị, nhằm mang đến cho bạn trải nghiệm ẩm thực thú vị và bổ ích nhất.</p>
+                <p><span>Không gian:</span> Không gian của nhà hàng XanhLa được thiết kế theo phong cách hiện đại, xanh mát với nhiều cây cối, mang đến cảm giác thư giãn, thoải mái cho khách hàng. Đây là nơi lý tưởng cho các buổi hẹn hò lãng mạn, họp mặt gia đình hay những buổi tiệc sinh nhật, kỷ niệm.</p>
+                <p><span>Địa chỉ:</span> Trường đại học Phenikaa - Yên Nghĩa - Hà Đông - Hà Nội.</p>
+                <p><span>Giờ mở cửa:</span> Thứ Hai - Chủ Nhật: 10:00 - 22:00</p>
+                <p><span>Liên hệ:</span>
+                    <ul>
+                        <li><span>Điện thoại:</span> 0912345678</li>
+                        <li><span>Email:</span> XanhLa@gmail.com</li>
+                    </ul>
+                </p>
+                </div>     
+            </div>
+    </main>
+    <footer>
+        <div class="footer1"></div>
+        <div class="footer2">
+            <div class="logo">
+                <img src="./assets/Leaf.png" alt="">
+                <h1>XanhLa</h1>
+            </div>
+            <p>Nhà hàng XanhLa - Thích màu xanh</p>
+            <p><i class="fa-solid fa-location-dot"></i>Trường Đại học Phenikaa - Yên Nghĩa - Hà Đông - Hà Nội</p>
+            <p><i class="fa-solid fa-phone"></i>0912345678</p>
+            <p><i class="fa-solid fa-envelope"></i>XanhLa@gmail.com</p>
+            <div class="tb">
+                <img src="./assets/Da-thong-bao-bo-cong-thuong 1.png" alt="loi">
+            </div>
+        </div>
+    </footer>
+    <div class="loader"></div>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" 
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+        </script>
+        <script src="./js/Home.js"></script>
+</body>
+</html>

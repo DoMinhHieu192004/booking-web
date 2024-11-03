@@ -1,0 +1,209 @@
+/* Đặt style cơ bản cho body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b8e6d1 0%, #ffffff 50%, #b8e6d1 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container chính */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo span {
+    font-weight: bold;
+    color: #333;
+    font-size: 30px;
+}
+
+/* Nút quay lại */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.search-icon-container i {
+    font-size: 1.5em;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Các nút điều khiển */
+.controls button {
+    padding: 8px 20px;
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #00A66EB2;
+    color: white;
+}
+
+/* Hộp tìm kiếm */
+.search-box input {
+    padding: 8px 15px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-icon-container {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Danh sách khách hàng */
+.customer-list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+    color: white;
+    font-weight: bold;
+}
+
+.cell {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: #00A66EB2;
+    color: white;
+}
+
+.cell:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Nút sửa và xóa */
+button.edit-btn, button.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button.edit-btn {
+    background-color: #4CAF50;
+}
+
+button.edit-btn:hover {
+    background-color: #45a049;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+}
+
+button.delete-btn:hover {
+    background-color: #e53935;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+#addEmployeeForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    padding: 12px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Viền xung quanh */
+    border-radius: 8px; /* Bo góc viền */
+    background-color: #f9f9f9; /* Màu nền */
+    margin-bottom: 10px;
+}
+
+#addEmployeeForm input,
+#addEmployeeForm select {
+    flex: 1; /* Cho các phần tử cùng chiếm không gian */
+    min-width: 150px; /* Chiều rộng tối thiểu cho các phần tử */
+    padding: 10px; /* Khoảng cách bên trong phần tử */
+    border: 1px solid #ccc; /* Viền cho input và select */
+    border-radius: 4px; /* Bo góc cho input và select */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+
+#addEmployeeForm button {
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    background-color: #4CAF50; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Hiệu ứng chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+#addEmployeeForm button:hover {
+    background-color: #45a049; /* Màu khi di chuột qua nút */
+}

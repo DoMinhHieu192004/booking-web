@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý - XanhLa</title>
+    <link rel="stylesheet" href="./styles/managerSelectStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="./assets/leaf.png" alt="XanhLa Logo" class="logo">
+                <span class="brand-name">XanhLa</span>
+            </div>
+            <h1>QUẢN LÝ</h1>
+        </div>
+        
+        <div class="menu-buttons">
+            <button class="menu-btn">Quản lý thông tin nhân viên</button>
+            <button class="menu-btn">Quản lý tầng</button>
+            <button class="menu-btn">Quản lý khách hàng</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.menu-btn');
+            
+            buttons.forEach(button => {
+                button.style.backgroundColor = '#ffffff';
+
+                button.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#72CAAF';
+                });
+
+                button.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '#ffffff';
+                });
+
+                button.addEventListener('mousedown', function() {
+                    this.style.backgroundColor = '#00A66E';
+                });
+            });
+
+            const employee = buttons[0];
+            const floor = buttons[1];
+            const customer = buttons[2];
+
+            employee.addEventListener("click", function () {
+                window.location.href = "formManagerEmployee.html";
+            });
+
+            floor.addEventListener("click", function () {
+                window.location.href = "floorManager.html";
+            });
+
+            customer.addEventListener("click", function () {
+                window.location.href = "formManagerCustomer.html";
+            });
+        });
+    </script>
+</body>
+</html>

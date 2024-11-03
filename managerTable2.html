@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUẢN LÝ BÀN</title>
+    <link rel="stylesheet" href="./styles/managerTableStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <button class="back-button">
+           <a href="./floorManager.html"><i class="fa-solid fa-xmark"></i></a> 
+        </button>
+    <div class="main-content">
+        <div class="header">
+            <div class="logo">
+            <img src="./assets/images/leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+    
+        <h1>QUẢN LÝ BÀN</h1>
+    </div>
+        
+        <div class="floor-container">
+            <div class="floor-selection">
+                <div class="floor-controls">
+                    <div class="floor-dropdown">
+                        <div class="floor-selected">Tầng 2</div>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="floor-actions">
+                <button class="add-table-btn">
+                    Thêm bàn
+                </button>
+                <button class="edit-btn">
+                    Sửa
+                </button>
+                <button class="save-btn">
+                    Lưu
+                </button>
+            </div>
+        </div>
+        <div class="floor-layout-new">
+            
+            <div class="table-buttons">
+            </div>
+            <div class="floor-info-box">
+                <div class="table-detail">
+                    <div class="image-preview"></div>
+                    
+                    <div class="input-group1">
+                        <label for="table-number">Số bàn:</label>
+                        <input type="text" id="table-number">
+                    </div>
+    
+                    <div class="input-group">
+                        <label>Thông tin:</label>
+                        <textarea></textarea>
+                    </div>
+    
+                    <div class="button-group">
+                        <button>Chọn ảnh</button>
+                        <button>Xóa bàn</button>
+                    </div>
+                </div>
+            </div>
+            <div class="facilities">
+                <div class="elevator">
+                    <img src="./assets/elevator.png" alt="Elevator">
+                </div>
+                <div class="doors-container">
+                    <div class="door" id="door1">
+                        <img src="./assets/door.png" alt="Door">
+                    </div>
+                    <div class="door" id="door2">
+                        <div class="floor-text">Sân</div>
+                        <img src="./assets/door.png" alt="Door">
+                        <div class="horizontal-line"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+    
+    <script src="./js/managerTable2.js"></script>
+</body>
+</html>

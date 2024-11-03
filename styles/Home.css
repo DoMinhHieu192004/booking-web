@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 186px;
+    width: autopx;
+    background: linear-gradient(180deg, rgba(114, 202, 175, 0.80) 0%, rgba(255, 255, 255, 0.80) 58%);
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo h1{
+    color: #000;
+    font-family: "Inder";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.navbar img{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.navbar .navbar-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .navbar-link a{
+    color: #707070;
+    font-family: "Inknut Antiqua";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.navbar .navbar-link a:hover{
+    color: #00A66E;
+}
+
+.navbar-search{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-search .input{
+    color: #707070;
+    font-family: "Inknut Antiqua";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 400px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 1px solid #707070;
+    background: #FFF;
+    text-indent: 20px;
+}
+
+.navbar-search .fa-solid{
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+/* book */
+
+.book{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(114, 202, 175, 0.80) 100%);
+    width: autopx;
+    height: 341px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.book .book-logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 80px;
+    border: 0.5px solid #72CAAF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #72CAAF;
+}
+
+.book a{
+    color: #000;
+    font-family: "Inknut Antiqua";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/* main */
+main{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: autopx;
+    margin-top: 20px;
+}
+
+.food{
+    width: 1236px;
+    height: 75px;
+    display: flex;
+    border-bottom: 1px solid #707070;
+    justify-content: center;
+    align-items: center;
+}
+
+.food h2{
+    color: #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #707070;
+    font-family: "Inknut Antiqua";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.option-bar{
+    width: 1022px;
+}
+
+.option-bar .button{
+    margin-top: 35px;
+    justify-content: center;
+    display: flex;
+}
+
+.option-bar .option-bar-link button:hover{
+    background-color: #72CAAF;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.option-bar .option-bar-link{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.option-bar .option-bar-link .image-button1{
+    width: 241px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.option-bar .option-bar-link .image-button2{
+    width: 84px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.option-bar .option-bar-link .image-button3{
+    width: 120px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.option-bar .option-bar-link .image-button4{
+    width: 172px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.option{
+    margin-top: 135px;
+}
+
+.options .image{
+    padding-bottom: 83.39px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: #D4EFE6;
+    
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    display: none;
+}
+
+.option1-img{
+    display: flex;
+}
+
+.active{
+    background-color: #72CAAF;
+    color: #000;
+}
+
+.menu-11 .optionss{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+   
+}
+
+.optionss .image{
+    padding-bottom: 83.39px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: #D4EFE6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.menu h2{
+    color: #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #707070;
+    font-family: "Inknut Antiqua";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 50px;
+    width: 1236px;
+    height: 75px;
+    display: flex;
+    border-bottom: 1px solid #707070;
+    justify-content: center;
+    align-items: center;
+}
+
+.infor h3{
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.in4-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in4-1 h2{
+    color: #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #707070;
+    font-family: "Inknut Antiqua";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 50px;
+    width: 1236px;
+    height: 75px;
+    display: flex;
+    border-bottom: 1px solid #707070;
+    justify-content: center;
+    align-items: center;
+}
+
+.infor span{
+    font-weight: bolder;
+}
+
+.in4-2 p{
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    margin-top: 70px;
+    width: 1200px;
+}
+
+.in4-2 li{
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.5px; 
+    margin-left: 80px;
+}
+
+.in4-2{
+    margin-bottom: 200px;
+}
+
+.footer2{
+    width: autopx;
+    height: 775px;
+    flex-shrink: 0;
+    padding-left: 44px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(114, 202, 175, 0.80) 100%);
+}
+
+.footer1{
+    width: autopx;
+    height: 100px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(114, 202, 175, 0.64) 0%, rgba(255, 255, 255, 0.80) 100%);
+}
+
+footer .logo{
+    display: flex;
+    align-items: center;
+}
+
+footer .logo h1{
+    color: #000;
+    font-family: "Inder";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .logo img{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+footer p{
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+}
+
+.footer2 .tb img{
+    width: 200px;
+    height: 65.6px;
+    flex-shrink: 0;
+    margin-top: 200px;
+}
+
+.footer2 i{
+    margin-right: 10px;
+}

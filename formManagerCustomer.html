@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Khách Hàng</title>
+    <link rel="stylesheet" href="./styles/manageCustomerStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const selects = document.querySelectorAll(".action-select");
+        selects.forEach(select => {
+            select.addEventListener("change", function () {
+                const selectedOption = select.value;
+                if (selectedOption === "confirmed") {
+                    select.style.backgroundColor = "#00A66EB2";
+                    select.style.color = "#fff";
+                } else if (selectedOption === "unconfirmed") {
+                    select.style.backgroundColor = "#ff2e5f";
+                    select.style.color = "#fff";
+                } else {
+                    select.style.backgroundColor = "#FFFFFF"; 
+                    select.style.color = "#000";
+                }
+            });
+        });
+    });
+</script>
+
+<body>
+    <div class="container">
+        <button class="back-button">
+            <a href="./managerSelect.html"><i class="fa-solid fa-xmark"></i></a>
+        </button>
+
+        <div class="logo">
+            <img src="./assets/Leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+        
+        <h1>THÔNG TIN KHÁCH HÀNG ĐÃ ĐẶT BÀN</h1>
+        
+        <div class="toolbar">
+            <div class="right-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button class="search-icon-container">
+                        <i class="fa-solid fa-magnifying-glass" onclick="searchAndScroll()"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-list">
+            <div class="list-header row">
+                <div class="cell">STT</div>
+                <div class="cell">Họ và tên</div>
+                <div class="cell">Ngày</div>
+                <div class="cell">Giờ</div>
+                <div class="cell">Bàn đã đặt</div>
+                <div class="cell">Số điện thoại</div>
+                <div class="cell">Note</div>
+                <div class="cell">Tình trạng</div>
+                <div class="cell">Yêu cầu hủy</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/formManagerCustomer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

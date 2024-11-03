@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt bàn</title>
+    <link rel="stylesheet" href="./styles/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <button class="back-button">
+           <a href="./Home.html"><i class="fa-solid fa-xmark"></i></a> 
+        </button>
+    <div class="main-content">
+        <div class="header">
+            <div class="logo">
+            <img src="./assets/Leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+    
+        <h1>ĐẶT BÀN</h1>
+    </div>
+        
+        <div class="floor-container">
+            <div class="floor-selection">
+                <div class="floor-controls">
+                    <div class="floor-dropdown">
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown()" class="dropbtn">Tầng 3</button>
+                            <div id="myDropdown" class="dropdown-content">
+                              <a href="booking1.html">Tầng 1</a>
+                              <a href="booking2.html">Tầng 2</a>
+                            </div>
+                          </div>
+
+                          
+                        <button class="history-button">Lịch sử đặt bàn</button>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="floor-actions">
+                <input type="date" placeholder="xx/xx/xxxx" class="form-input1 date">
+                <input type="time" placeholder="xx : xx AM/PM" class="form-input1 time">
+                <button class="select-button">Chọn</button>
+            </div>
+        </div>
+        <div class="floor-layout-new">   
+            <div class="table-buttons" id="floorLayoutContainer">
+            </div>
+            <div class="floor-info-box">
+                <div class="table-detail">
+                    <img src="./assets/beach.jpg" alt="Bàn B1.1" class="table-image">
+                    
+                    <div class="input-group1">
+                        <h3 class="table-name"></h3>
+                    </div>
+    
+                    <div class="input-group">
+                        <ul class="table-features">
+                            <li>Bàn có 2 chỗ ngồi cực lãng mạn, phù hợp với các cặp đôi.</li>
+                            <li>View hướng ra bãi biển cực đẹp, thích hợp selfie chụp ảnh.</li>
+                        </ul>
+                    </div>
+    
+                    <div class="button-group">
+                        <div class="form-row">
+                            <input type="text" placeholder="Họ và tên" class="form-input">
+                            <input type="tel" placeholder="Số điện thoại" class="form-input">
+                        </div>
+                        <div class="form-row">
+                            
+                            <input type="number" placeholder="Số người" class="form-input2">
+                        </div>
+                        <input type="text" placeholder="Ghi chú (nếu có)" class="form-input2">
+                        <div class="button-container">
+                            <button class="select-button1">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="facilities">
+                <div class="elevator">
+                    <img src="./assets/elevator.png" alt="Elevator">
+                </div>
+                <div class="doors-container">
+                    <div class="door" id="door1">
+                        <img src="./assets/door.png" alt="Door">
+                    </div>
+                    <div class="door" id="door2">
+                        <div class="floor-text">Sân</div>
+                        <img src="./assets/door.png" alt="Door">
+                        <div class="horizontal-line"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+    <script>function toggleDropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }</script>
+    <script src="./js/booking3.js"></script>
+</body>
+</html>

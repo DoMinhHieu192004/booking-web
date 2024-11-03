@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bàn Đã Đặt</title>
+    <link rel="stylesheet" href="./styles/myOder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button">
+            <a href="./Home.html"><i class="fa-solid fa-xmark"></i></a>
+        </button>
+
+        <div class="logo">
+            <img src="./assets/Leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+        
+        <h1>THÔNG TIN BÀN ĐÃ ĐẶT </h1>
+        
+        <div class="toolbar">
+            <div class="right-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button class="search-icon-container">
+                        <i class="fa-solid fa-magnifying-glass" onclick="searchAndScroll()"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-list">
+            <div class="list-header row">
+                <div class="cell">STT</div>
+                <div class="cell">Ngày</div>
+                <div class="cell">Thời gian</div>
+                <div class="cell">Bàn đã đặt</div>
+                <div class="cell">Số người</div>
+                <div class="cell">Yêu cầu hủy</div>
+                <div class="cell">Tình trạng</div>
+            </div>
+
+            <div class="list-item row">
+                <div class="cell">1</div>
+                <div class="cell">22/7/2004</div>
+                <div class="cell">11:00</div>
+                <div class="cell">1.1</div>
+                <div class="cell">2</div>
+                <div class="cell" id="white">
+                    <button type="button" class="cancel-request-btn">Yêu cầu hủy</button>
+                </div>
+                <div class="cell">Chưa xác nhận</div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/myOder.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

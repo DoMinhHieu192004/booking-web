@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Viên</title>
+    <link rel="stylesheet" href="./styles/formManagerEmployee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <a class="back-button" href="./managerSelect.html">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+
+        <div class="logo">
+            <img src="./assets/Leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+        
+        <h1>THÔNG TIN NHÂN VIÊN</h1>
+        
+        <div class="toolbar">
+            <div class="controls">
+                <button onclick="toggleAddEmployeeForm()">Thêm</button>
+            </div>
+            <div class="right-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button class="search-icon-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form thêm nhân viên -->
+        <div id="addEmployeeForm" style="display: none;">
+            <input type="text" id="newName" placeholder="Họ và tên">
+            <input type="text" id="newEmployeeId" placeholder="Mã nhân viên">
+            <input type="text" id="newSalary" placeholder="Lương">
+            <input type="text" id="newJob" placeholder="Công Việc">
+            <select id="newType">
+                <option value="Part-time">Part-time</option>
+                <option value="Full-time">Full-time</option>
+            </select>
+            <button onclick="handleAddEmployee()">Lưu</button>
+        </div>
+
+        <div class="customer-list">
+            <div class="list-header row">
+                <div class="cell">STT</div>
+                <div class="cell">Họ và tên</div>
+                <div class="cell">Mã nhân viên</div>
+                <div class="cell">Lương</div>
+                <div class="cell">Công Việc</div>
+                <div class="cell">Loại</div>
+                <div class="cell">Hành động</div>
+            </div>
+            <div id="employeeList"></div>
+        </div>
+    </div>
+
+    <script src="./js/formManagerEmployee.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XanhLa - Đăng Nhập</title>
+    <link rel="stylesheet" href="./styles/LoginForManagerStyle.css">
+</head>
+<body>
+    <div class="container">
+    <div class="login-container">
+        <div class="logo">
+            <img src="assets/leaf.png" alt="XanhLa Logo">
+            <span>XanhLa</span>
+        </div>
+        <h1>ĐĂNG NHẬP</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </div>
+</div>
+    <div class="loader"></div>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" 
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+        </script>
+        <script src="./js/loginForManager.js"></script>
+</body>
+</html>
