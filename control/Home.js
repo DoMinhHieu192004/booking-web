@@ -40,3 +40,8 @@ function searchAndScroll() {
     alert("Không tìm thấy từ khóa trong nội dung!");
 }
 
+const buttonLogout = document.querySelector(".logout")
+buttonLogout.addEventListener("click",() => {
+    localStorage.removeItem("userRegister")
+    window.location.href = "Register.html"
+ })

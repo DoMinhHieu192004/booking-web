@@ -106,3 +106,30 @@ h1 {
     margin-left: 1300px;
 }
 
+.menu-btn {
+    position: relative;
+}
+
+.menu-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 120%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.menu-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+

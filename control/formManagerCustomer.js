@@ -1,8 +1,9 @@
 const apiUrls = [
-    'https://6725922fc39fedae05b5163c.mockapi.io/booking', // Floor 1
-    'https://6726edb9302d03037e6ebcec.mockapi.io/api/v1/floor', // Floor 2
-    'https://6726edb9302d03037e6ebcec.mockapi.io/api/v1/floor3' // Floor 3
+    'https://6725922fc39fedae05b5163c.mockapi.io/booking', // Tầng 1
+    'https://6726edb9302d03037e6ebcec.mockapi.io/api/v1/floor', // Tầng 2
+    'https://6726edb9302d03037e6ebcec.mockapi.io/api/v1/floor3' // Tầng 3
 ];
+
 const customerList = document.querySelector('.customer-list');
 
 async function loadBookings() {
@@ -28,8 +29,9 @@ async function loadBookings() {
             const listItem = document.createElement('div');
             listItem.classList.add('list-item', 'row');
 
-            const bookingDate = new Date(booking.time).toLocaleDateString('vi-VN');
-            const bookingTime = new Date(booking.time).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            const date = new Date(booking.time);
+            const bookingDate = isNaN(date.getTime()) ? "Không xác định" : date.toLocaleDateString('vi-VN');
+            const bookingTime = isNaN(date.getTime()) ? "Không xác định" : date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
 
             listItem.innerHTML = `
                 <div class="cell">${index + 1}</div>
@@ -39,7 +41,7 @@ async function loadBookings() {
                 <div class="cell">${booking.nameTable || "Không rõ"}</div>
                 <div class="cell">${booking.phone || "Không có"}</div>
                 <div class="cell">${booking.note || "Không có"}</div>
-                <div class="cell" id="white">
+                <div class="cell">
                     <select class="action-select" data-id="${booking.id}" data-url="${getBookingUrl(booking.id)}">
                         <option value="Chưa xác nhận" ${booking.status === "Chưa xác nhận" ? "selected" : ""}>Chưa xác nhận</option>
                         <option value="Đã xác nhận" ${booking.status === "Đã xác nhận" ? "selected" : ""}>Đã xác nhận</option>
@@ -57,13 +59,17 @@ async function loadBookings() {
         });
     } catch (error) {
         console.error('Lỗi khi tải dữ liệu:', error);
+        alert('Không thể tải dữ liệu. Vui lòng thử lại sau.');
     }
 }
 
 async function handleStatusChange(event, bookingId, bookingUrl) {
     const newStatus = event.target.value;
     try {
-        const response = await fetch(`${bookingUrl}/${bookingId}`, {
+        const url = `${bookingUrl}/${bookingId}`;
+        console.log(`Đang gửi yêu cầu PUT tới: ${url}`);
+
+        const response = await fetch(url, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -72,20 +78,23 @@ async function handleStatusChange(event, bookingId, bookingUrl) {
         });
 
         if (response.ok) {
-            console.log(`Cập nhật trạng thái thành công cho đơn ${bookingId} thành ${newStatus}`);
             updateSelectStyle(event.target);
+            console.log(`Cập nhật trạng thái thành công cho đơn ${bookingId} thành ${newStatus}`);
         } else {
-            console.error("Lỗi khi cập nhật trạng thái");
+            console.error(`Lỗi cập nhật trạng thái: HTTP ${response.status}`);
+            alert('Không thể cập nhật trạng thái. Vui lòng thử lại.');
         }
     } catch (error) {
         console.error('Lỗi khi cập nhật trạng thái:', error);
+        alert('Có lỗi xảy ra khi cập nhật trạng thái.');
     }
 }
 
 function getBookingUrl(bookingId) {
-    if (bookingId.startsWith("1")) return apiUrls[0];
-    if (bookingId.startsWith("2")) return apiUrls[1];
-    return apiUrls[2];
+    // Xác định URL API dựa trên ID
+    if (parseInt(bookingId) >= 1 && parseInt(bookingId) <= 9) return apiUrls[0]; // Tầng 1
+    if (bookingId.startsWith("2")) return apiUrls[1]; // Tầng 2
+    return apiUrls[2]; // Tầng 3
 }
 
 function updateSelectStyle(select) {

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tầng</title>
+    <link rel="stylesheet" href="/styles/floorManager.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Inknut Antiqua;
+            background: linear-gradient(to bottom, #b8e6d1 0%, #ffffff 50%, #b8e6d1 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-btn {
+            position: relative;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .menu-btn:hover {
+            background-color: #72CAAF;
+        }
+
+        .menu-btn:active {
+            background-color: #00A66E;
+        }
+
+        .edit-floor-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 25px;
+            background-color: #00A66E;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .edit-floor-btn:hover {
+            background-color: #007d5c;
+            transform: translateY(-3px);
+        }
+
+        .edit-floor-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .edit-form-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 350px;
+        }
+
+        .edit-form-container h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .input-group textarea {
+            width: 94%;
+            padding: 10px;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        #save-btn, #cancel-btn {
+            padding: 10px;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #save-btn {
+            background-color: #00A66E;
+            color: #fff;
+        }
+
+        #save-btn:hover {
+            background-color: #007d5c;
+        }
+
+        #cancel-btn {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        #cancel-btn:hover {
+            background-color: #999;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="/assets/leaf.png" alt="XanhLa Logo" class="logo">
+                <span class="brand-name">XanhLa</span>
+            </div>
+            <div class="X">
+                <a href="managerSelect.html"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <h1>QUẢN LÝ TẦNG</h1>
+        </div>
+        
+        <div class="menu-buttons">
+            <button class="menu-btn" data-tooltip="Thông tin về Tầng 1">Tầng 1</button>
+            <button class="menu-btn" data-tooltip="Thông tin về Tầng 2">Tầng 2</button>
+            <button class="menu-btn" data-tooltip="Thông tin về Tầng 3">Tầng 3</button>
+        </div>
+
+        <button class="edit-floor-btn">Sửa Thông Tin Tầng</button>
+
+        <div class="edit-form-container hidden">
+            <h2>Sửa Thông Tin Tầng</h2>
+            <select id="floor-select">
+                <option value="1">Tầng 1</option>
+                <option value="2">Tầng 2</option>
+                <option value="3">Tầng 3</option>
+            </select>
+            <div class="input-group">
+                <label for="floor-info">Thông tin tầng:</label>
+                <textarea id="floor-info" rows="5"></textarea>
+            </div>
+            <button id="save-btn">Lưu</button>
+            <button id="cancel-btn">Hủy</button>
+        </div>
+    </div>
+
+    <script src="/control/floorManager.js"></script>
+</body>
+</html>

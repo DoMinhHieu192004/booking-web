@@ -73,12 +73,17 @@ editBtn.addEventListener('click', () => {
 });
 
 function handleDragStart(e, element) {
-    let offsetX = e.clientX - element.getBoundingClientRect().left;
-    let offsetY = e.clientY - element.getBoundingClientRect().top;
+    e.preventDefault();
+
+    const containerRect = floorLayoutContainer.getBoundingClientRect();
+    const elementRect = element.getBoundingClientRect();
+    
+    const offsetX = e.clientX - elementRect.left;
+    const offsetY = e.clientY - elementRect.top;
 
     const moveTable = (e) => {
-        let newX = e.clientX - offsetX;
-        let newY = e.clientY - offsetY;
+        let newX = e.clientX - containerRect.left - offsetX;
+        let newY = e.clientY - containerRect.top - offsetY;
 
         newX = Math.max(0, Math.min(newX, floorLayoutContainer.clientWidth - element.offsetWidth));
         newY = Math.max(0, Math.min(newY, floorLayoutContainer.clientHeight - element.offsetHeight));

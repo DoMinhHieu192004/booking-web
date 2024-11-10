@@ -1,4 +1,4 @@
-const apiUrl = 'https://66b32cd87fba54a5b7ebc44a.mockapi.io/api/v1/register/register';
+const apiUrl = 'https://6725922fc39fedae05b5163c.mockapi.io/3';
 const apiUrl1 = 'https://6726edb9302d03037e6ebcec.mockapi.io/api/v1/floor3';
 
 const dateInput = document.querySelector('input[placeholder="xx/xx/xxxx"]');
@@ -26,6 +26,44 @@ async function loadTables() {
         console.error('Lỗi khi tải dữ liệu:', error);
     }
 }
+
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
+const floor3ApiUrl = 'https://672f6318229a881691f2cb2e.mockapi.io/floor3';
+
+async function loadFloorInfo() {
+    try {
+        const response = await fetch(floor3ApiUrl);
+        const data = await response.json();
+        const floorInfoDiv = document.querySelector('.floor-info');
+
+        if (response.ok && data.length > 0) {
+            floorInfoDiv.innerHTML = `<p>${data[0].info}</p>`;
+        } else {
+            floorInfoDiv.innerHTML = `<p>Chưa có thông tin cho tầng 1.</p>`;
+        }
+    } catch (error) {
+        console.error("Lỗi khi tải thông tin tầng 1:", error);
+        const floorInfoDiv = document.querySelector('.floor-info');
+        floorInfoDiv.innerHTML = `<p>Lỗi khi tải dữ liệu từ máy chủ.</p>`;
+    }
+}
+
+window.onload = loadFloorInfo;
 
 function createTableButton(tableData) {
     const { id, name, xPosition, yPosition, imageUrl: imgUrl, info } = tableData;

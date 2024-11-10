@@ -18,6 +18,26 @@ body {
     margin-left: 200px;
   }
   
+  .floor-info {
+    width: 25%;
+    font-size: 1rem;
+    font-family: 'Inknut Antiqua', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 287px;
+    background-color: #5ba88a;
+    color: white;
+   }
+
+   .hi{
+    display: flex;
+    margin-left: 400px;
+   }
+
   .logo {
     display: flex;
     align-items: center;

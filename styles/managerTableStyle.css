@@ -153,6 +153,14 @@ body {
       display: block;
   }
   
+  .image-preview {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 134px;
+}
+
+
   .input-group {
       display: flex;
       flex-direction: column;
@@ -617,7 +625,8 @@ body {
   
   
   .main-content {
-      margin-top: 50px; 
+      margin-top: 300px; 
+      margin-right: 200px;
   }
   
   .fix-button, .save-button {

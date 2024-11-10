@@ -8,7 +8,6 @@ const buttonBookingInfor = buttons[1];
 const container = document.querySelector(".all");
 const loader = document.querySelector("div.loader");
 
-container.style.display = 'none';
 setTimeout(() => {
     loader.style.display = "none";
     container.style.display = "flex";

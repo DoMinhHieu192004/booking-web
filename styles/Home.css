@@ -85,6 +85,26 @@
     height: 50px;
 }
 
+.logout {
+    border-radius: 20px;
+    border: 1px solid #1f409a;
+    background-color: #1f409a;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-bottom: 6px;
+}
+
+.logout:hover {
+    background-color: transparent;
+    border-color: #1f409a;
+    color: #000;
+}
+
 /* book */
 
 .book{

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản Lý - XanhLa</title>
-    <link rel="stylesheet" href="./styles/managerSelectStyle.css">
+    <link rel="stylesheet" href="/styles/managerSelectStyle.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo-container">
-                <img src="./assets/leaf.png" alt="XanhLa Logo" class="logo">
+                <img src="/assets/leaf.png" alt="XanhLa Logo" class="logo">
                 <span class="brand-name">XanhLa</span>
+                <button class="logout">Logout</button>
             </div>
             <h1>QUẢN LÝ</h1>
         </div>
@@ -19,7 +20,7 @@
         <div class="menu-buttons">
             <button class="menu-btn">Quản lý thông tin nhân viên</button>
             <button class="menu-btn">Quản lý tầng</button>
-            <button class="menu-btn">Quản lý khách hàng</button>
+            <button class="menu-btn">Thông tin bàn đã đặt</button>
         </div>
     </div>
     <script>
@@ -58,6 +59,11 @@
                 window.location.href = "formManagerCustomer.html";
             });
         });
+        const buttonLogout = document.querySelector(".logout")
+              buttonLogout.addEventListener("click",() => {
+              localStorage.removeItem("userRegister")
+              window.location.href = "LoginForManager.html"
+        })
     </script>
 </body>
 </html>

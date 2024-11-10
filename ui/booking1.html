@@ -4,38 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt bàn</title>
-    <link rel="stylesheet" href="./styles/booking.css">
+    <link rel="stylesheet" href="/styles/booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
     <div class="container">
         <button class="back-button">
-           <a href="./Home.html"><i class="fa-solid fa-xmark"></i></a> 
+           <a href="Home.html"><i class="fa-solid fa-xmark"></i></a> 
         </button>
     <div class="main-content">
         <div class="header">
             <div class="logo">
-            <img src="./assets/Leaf.png" alt="XanhLa Logo">
+            <img src="/assets/Leaf.png" alt="XanhLa Logo">
             <span>XanhLa</span>
         </div>
-    
-        <h1>ĐẶT BÀN</h1>
+        <div class="hi">
+            <h1>ĐẶT BÀN</h1>
+            <div class="floor-info"></div>
+        </div>
     </div>
-        
         <div class="floor-container">
             <div class="floor-selection">
                 <div class="floor-controls">
                     <div class="floor-dropdown">
                         <div class="dropdown">
-                            <button onclick="toggleDropdown()" class="dropbtn">Tầng 2</button>
+                            <button onclick="toggleDropdown()" class="dropbtn">Tầng 1</button>
                             <div id="myDropdown" class="dropdown-content">
-                              <a href="booking1.html">Tầng 1</a>
+                              <a href="booking2.html">Tầng 2</a>
                               <a href="booking3.html">Tầng 3</a>
                             </div>
                           </div>
 
                           
-                        <button class="history-button">Lịch sử đặt bàn</button>
+                        <button class="history-button"></a>Lịch sử đặt bàn</button>
                     </div>
                 </div>    
             </div>
@@ -51,7 +52,7 @@
             </div>
             <div class="floor-info-box">
                 <div class="table-detail">
-                    <img src="./assets/beach.jpg" alt="Bàn B1.1" class="table-image">
+                    <img src="/assets/beach.jpg" alt="Bàn B1.1" class="table-image">
                     
                     <div class="input-group1">
                         <h3 class="table-name"></h3>
@@ -82,15 +83,15 @@
             </div>
             <div class="facilities">
                 <div class="elevator">
-                    <img src="./assets/elevator.png" alt="Elevator">
+                    <img src="/assets/elevator.png" alt="Elevator">
                 </div>
                 <div class="doors-container">
                     <div class="door" id="door1">
-                        <img src="./assets/door.png" alt="Door">
+                        <img src="/assets/door.png" alt="Door">
                     </div>
                     <div class="door" id="door2">
                         <div class="floor-text">Sân</div>
-                        <img src="./assets/door.png" alt="Door">
+                        <img src="/assets/door.png" alt="Door">
                         <div class="horizontal-line"></div>
 
                     </div>
@@ -116,6 +117,6 @@
           }
         }
       }</script>
-    <script src="./js/booking2.js"></script>
+    <script src="/control/booking1.js"></script>
 </body>
 </html>

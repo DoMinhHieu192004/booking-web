@@ -37,6 +37,7 @@ function createTableButton(tableData) {
     tableButton.style.left = `${xPosition}px`;
     tableButton.style.top = `${yPosition}px`;
     tableButton.dataset.id = id;
+    tableButton.dataset.name = name;  // Thêm tên bàn vào dataset
 
     tableButton.addEventListener('click', () => {
         currentTable = { id, element: tableButton };
@@ -80,11 +81,12 @@ async function checkAvailability() {
 
         const tableButtons = document.querySelectorAll('.table-button');
         tableButtons.forEach(button => {
-            const tableId = button.dataset.id;
+            const tableName = button.dataset.name;  // Lấy tên bàn từ dataset
+            console.log("Bàn " + tableName);
             const isAvailable = bookings.every(booking => {
                 const bookingTime = new Date(booking.time);
                 return (
-                    booking.id !== tableId ||
+                    booking.nameTable !== tableName ||  // So sánh với nameTable trong apiUrl1
                     bookingTime < startTime ||
                     bookingTime > endTime
                 );
